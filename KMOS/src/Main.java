@@ -6,7 +6,7 @@ public class Main {
 			public void run() {
 				try {
 					PPmodel PPmodel = new PPmodel();
-					PPmodel.TelaLogIn();
+					PPmodel.TelaLogIn(PPmodel);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

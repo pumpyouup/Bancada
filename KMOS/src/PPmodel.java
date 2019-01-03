@@ -11,8 +11,9 @@ public class PPmodel {
 	public PaginaPrincipal paginaPrincipal;
 	public LogIn login;
 	
-	public void TelaLogIn() {
+	public void TelaLogIn(PPmodel pPmodel) {
 		login = new LogIn();
+		login.ppmodel = pPmodel;
 		login.setVisible(true);
 	}
 	

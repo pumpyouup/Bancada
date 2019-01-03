@@ -15,7 +15,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class AdicionaMaquina extends JFrame {
+public class AdicionaMaquina extends PaginaPrincipal {
 
 	private JPanel contentPane;
 	private JTextField textField_1;

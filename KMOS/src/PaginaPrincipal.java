@@ -41,15 +41,13 @@ import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 
 
-public class PaginaPrincipal extends JFrame {
+public class PaginaPrincipal extends LogIn {
 
 	/////////////////////////////////////////
 	public String nome, bancada;
 	
 	public JPanel panel_4 = new JPanel();
 	public JPanel panel_5 = new JPanel();
-	
-	public PPmodel ppmodel = new PPmodel();	
 	
 	
 	/////////////////////////////////////////
