@@ -52,7 +52,7 @@ public class LogIn extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblLogIn = new JLabel("Login:");
+		JLabel lblLogIn = new JLabel("Logon:");
 		lblLogIn.setBounds(5, 5, 212, 45);
 		lblLogIn.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLogIn.setFont(new Font("Tahoma", Font.PLAIN, 20));
