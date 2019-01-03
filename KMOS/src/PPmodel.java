@@ -8,23 +8,33 @@ public class PPmodel {
 	private JButton[] vetorVermelho, vetorAmarelo, vetorVerde, vetorBancada;
 	private Maquina[] maquinaVermelho, maquinaAmarelo, maquinaVerde, maquinaBancada;
 	private int contVermelho = 0, contAmarelo = 0, contVerde = 0, contBancada = 0;
+	public PaginaPrincipal paginaPrincipal;
+	public LogIn login;
+	
+	public void TelaLogIn() {
+		login = new LogIn();
+		login.setVisible(true);
+	}
+	
+	public void TelaPaginaPrincipal(String nome, String bancada) {
+		paginaPrincipal = new PaginaPrincipal(bancada, nome);
+		paginaPrincipal.setVisible(true);
+	}
 			
-	public static void TelaAdicionaMaquinaVermelho () {
+	public void TelaAdicionaMaquinaVermelho () {
 		AdicionaMaquina frame = new AdicionaMaquina();
 		frame.setVisible(true);
 	}
 	
 	public void AdicionaMaquinaVermelho (String problema, String oS, String cliente, String data, String tipo, boolean contrato) {
 		 maquinaVermelho[contVermelho] = new Maquina(problema, oS, cliente, data, tipo, contrato);
-		 vetorVermelho[contVermelho] = new JButton("POSI\u00C7\u00C3O 00");
-		 vetorVermelho[contVermelho].addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			JButton btnNewButton_9 = new JButton("New button");
+			btnNewButton_9.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
 				}
 			});
-		vetorVermelho[contVermelho].setVisible(false);
-		vetorVermelho[contVermelho].setContentAreaFilled(false);
-		vetorVermelho[contVermelho].setEnabled(false);
-		PaginaPrincipal.panel_5.add(vetorVermelho[contVermelho], "cell 0 0");
+			paginaPrincipal.panel_4.add(btnNewButton_9, "cell 0 0");
+			
 			
 		 contVermelho++;
 		

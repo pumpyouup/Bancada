@@ -46,8 +46,10 @@ public class PaginaPrincipal extends JFrame {
 	/////////////////////////////////////////
 	public String nome, bancada;
 	
-	public static JPanel panel_5 = new JPanel();
+	public JPanel panel_4 = new JPanel();
+	public JPanel panel_5 = new JPanel();
 	
+	public PPmodel ppmodel = new PPmodel();	
 	
 	
 	/////////////////////////////////////////
@@ -206,7 +208,6 @@ public class PaginaPrincipal extends JFrame {
 		JScrollPane scrollPane_5 = new JScrollPane();
 		panel_2.add(scrollPane_5, "cell 1 1,grow");
 		
-		JPanel panel_4 = new JPanel();
 		scrollPane_5.setViewportView(panel_4);
 		panel_4.setBorder(UIManager.getBorder("CheckBox.border"));
 		panel_4.setLayout(new MigLayout("", "[grow,fill]", "[][][][][][][][][]"));
@@ -387,7 +388,7 @@ public class PaginaPrincipal extends JFrame {
 		btnOpc_1.setContentAreaFilled(false);
 		btnOpc_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				PPmodel.TelaAdicionaMaquinaVermelho();
+				ppmodel.TelaAdicionaMaquinaVermelho();
 				repaint();
 			}
 		});

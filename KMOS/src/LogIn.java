@@ -24,26 +24,8 @@ public class LogIn extends JFrame {
 	private final JButton btnNewButton = new JButton("Entrar");
 	private JPasswordField passwordField;
 	private String nome, bancada;
+	public PPmodel ppmodel;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					LogIn frame = new LogIn();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public LogIn() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 255);
@@ -80,8 +62,7 @@ public class LogIn extends JFrame {
 				try {
 					nome = comboBox_1.getSelectedItem().toString();
 					bancada = comboBox.getSelectedItem().toString();
-					PaginaPrincipal frame = new PaginaPrincipal(bancada, nome);
-					frame.setVisible(true);
+					ppmodel.TelaPaginaPrincipal(nome, bancada);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
