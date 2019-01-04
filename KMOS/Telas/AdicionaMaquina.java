@@ -15,7 +15,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class AdicionaMaquina extends PaginaPrincipal {
+public class AdicionaMaquina extends LogIn {
 
 	private JPanel contentPane;
 	private JTextField textField_1;
@@ -23,7 +23,6 @@ public class AdicionaMaquina extends PaginaPrincipal {
 	private JTextField textField_3;
 	private JTextField textField_4;
 	private JTextField textField_5;
-	public PPmodel PPmodel = new PPmodel();	
 	
 	public AdicionaMaquina() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,7 +76,6 @@ public class AdicionaMaquina extends PaginaPrincipal {
 		JButton btnAdicionar = new JButton("Adicionar");
 		btnAdicionar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PPmodel.AdicionaMaquinaVermelho(textField_1.getText(), textField_2.getText(), textField_3.getText(), textField_4.getText(), comboBox.getSelectedItem().toString(), checkBox.isSelected());
 			}
 		});
 		

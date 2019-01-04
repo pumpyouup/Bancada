@@ -17,6 +17,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
+import java.awt.Window.Type;
+import org.eclipse.wb.swing.FocusTraversalOnArray;
+import java.awt.Component;
 
 public class LogIn extends JFrame {
 
@@ -24,9 +27,10 @@ public class LogIn extends JFrame {
 	private final JButton btnNewButton = new JButton("Entrar");
 	private JPasswordField passwordField;
 	private String nome, bancada;
-	public PPmodel ppmodel;
 
 	public LogIn() {
+		setTitle("Login");
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 255);
 		contentPane = new JPanel();
@@ -60,9 +64,7 @@ public class LogIn extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					nome = comboBox_1.getSelectedItem().toString();
-					bancada = comboBox.getSelectedItem().toString();
-					ppmodel.TelaPaginaPrincipal(nome, bancada);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -82,5 +84,6 @@ public class LogIn extends JFrame {
 		passwordField.setHorizontalAlignment(SwingConstants.CENTER);
 		passwordField.setBounds(217, 95, 212, 45);
 		contentPane.add(passwordField);
+		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{contentPane, lblLogIn, comboBox, lblUsurio, comboBox_1, btnNewButton, lblSenha, passwordField}));
 	}
 }

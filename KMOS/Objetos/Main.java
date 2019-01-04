@@ -5,8 +5,9 @@ public class Main {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PPmodel PPmodel = new PPmodel();
-					PPmodel.TelaLogIn(PPmodel);
+					PPmodel ppmodel = new PPmodel();
+					LImodel limodel = new LImodel();
+
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

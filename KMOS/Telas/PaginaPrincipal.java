@@ -41,7 +41,7 @@ import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 
 
-public class PaginaPrincipal extends LogIn {
+public class PaginaPrincipal extends JFrame {
 
 	/////////////////////////////////////////
 	public String nome, bancada;
@@ -54,9 +54,10 @@ public class PaginaPrincipal extends LogIn {
 	
 	public JPanel contentPane;
 
-	public PaginaPrincipal(String bancada, String nome) {
+	public PaginaPrincipal() {
+		setEnabled(false);
 		setBackground(Color.WHITE);
-		setTitle(bancada + " - " + nome);
+		//setTitle(bancada + " - " + nome);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 986, 652);
 		
@@ -386,8 +387,7 @@ public class PaginaPrincipal extends LogIn {
 		btnOpc_1.setContentAreaFilled(false);
 		btnOpc_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ppmodel.TelaAdicionaMaquinaVermelho();
-				repaint();
+
 			}
 		});
 		mnMenu.add(btnOpc_1);
