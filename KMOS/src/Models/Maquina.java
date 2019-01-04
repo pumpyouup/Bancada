@@ -1,3 +1,4 @@
+package Models;
 public class Maquina {
 	
 	private String problema, OS, cliente, data, tipo;

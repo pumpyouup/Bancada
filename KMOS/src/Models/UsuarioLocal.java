@@ -1,3 +1,4 @@
+package Models;
 public class UsuarioLocal {
 
 	private String nome, bancada;

@@ -1,3 +1,4 @@
+package Models;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -19,6 +20,7 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import java.awt.Window.Type;
 import org.eclipse.wb.swing.FocusTraversalOnArray;
+
 import java.awt.Component;
 
 public class LogIn extends JFrame {

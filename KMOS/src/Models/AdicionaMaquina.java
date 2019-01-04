@@ -1,6 +1,4 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
+package Models;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -8,7 +6,6 @@ import net.miginfocom.swing.MigLayout;
 import javax.swing.JLabel;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
-import java.awt.Choice;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
@@ -22,7 +19,6 @@ public class AdicionaMaquina extends LogIn {
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
-	private JTextField textField_5;
 	
 	public AdicionaMaquina() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

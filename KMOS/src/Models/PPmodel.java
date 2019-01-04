@@ -1,3 +1,4 @@
+package Models;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,16 +15,17 @@ public class PPmodel extends JFrame {
 	private LogIn logIn;
 	private AdicionaMaquina adicionaMaquina;
 	private LImodel lImodel;
-	private UsuarioLocal ;
+	private UsuarioLocal usuarioLocal;
 	
 	public PPmodel() {
 		contVermelho = 0;
 		contAmarelo = 0;
 		contVerde = 0;
 		contBancada = 0;
-		paginaPrincipal = new PaginaPrincipal();
-		logIn = new LogIn();
-		adicionaMaquina = new AdicionaMaquina();
+		//paginaPrincipal = new PaginaPrincipal();
+		//logIn = new LogIn();
+		//adicionaMaquina = new AdicionaMaquina();
+		System.out.println("olas");
 	}
 	
 	public void AcessoLogIn (String nome, String bancada) {
