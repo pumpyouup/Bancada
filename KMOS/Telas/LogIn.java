@@ -26,9 +26,19 @@ public class LogIn extends JFrame {
 	private JPanel contentPane;
 	private final JButton btnNewButton = new JButton("Entrar");
 	private JPasswordField passwordField;
-	private String nome, bancada;
+	private String usuario, bancada;
+	private LImodel lImodel;
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public String getBancada() {
+		return bancada;
+	}
 
 	public LogIn() {
+		lImodel = new LImodel();
 		setTitle("Login");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -44,11 +54,11 @@ public class LogIn extends JFrame {
 		lblLogIn.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		contentPane.add(lblLogIn);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(217, 5, 212, 45);
-		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Bancada 01", "Bancada 02", "Bancada 03"}));
-		contentPane.add(comboBox);
+		JComboBox comboBoxBancada = new JComboBox();
+		comboBoxBancada.setBounds(217, 5, 212, 45);
+		comboBoxBancada.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		comboBoxBancada.setModel(new DefaultComboBoxModel(new String[] {"Bancada 01", "Bancada 02", "Bancada 03"}));
+		contentPane.add(comboBoxBancada);
 		
 		JLabel lblUsurio = new JLabel("Usu\u00E1rio:");
 		lblUsurio.setBounds(5, 50, 212, 45);
@@ -56,15 +66,17 @@ public class LogIn extends JFrame {
 		lblUsurio.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		contentPane.add(lblUsurio);
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setBounds(217, 50, 212, 45);
-		comboBox_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"Bruno", "Francisco", "Matheus", "Marcos", "Hugo"}));
-		contentPane.add(comboBox_1);
+		JComboBox comboBoxUsuario = new JComboBox();
+		comboBoxUsuario.setBounds(217, 50, 212, 45);
+		comboBoxUsuario.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		comboBoxUsuario.setModel(new DefaultComboBoxModel(new String[] {"Bruno", "Francisco", "Matheus", "Marcos", "Hugo"}));
+		contentPane.add(comboBoxUsuario);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					
+					bancada = comboBoxBancada.getSelectedItem().toString();
+					usuario = comboBoxUsuario.getSelectedItem().toString();
+					lImodel.BotaoEntrar();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -84,6 +96,6 @@ public class LogIn extends JFrame {
 		passwordField.setHorizontalAlignment(SwingConstants.CENTER);
 		passwordField.setBounds(217, 95, 212, 45);
 		contentPane.add(passwordField);
-		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{contentPane, lblLogIn, comboBox, lblUsurio, comboBox_1, btnNewButton, lblSenha, passwordField}));
+		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{contentPane, lblLogIn, comboBoxBancada, lblUsurio, comboBoxUsuario, btnNewButton, lblSenha, passwordField}));
 	}
 }

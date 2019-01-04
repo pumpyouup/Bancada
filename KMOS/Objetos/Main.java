@@ -6,7 +6,6 @@ public class Main {
 			public void run() {
 				try {
 					PPmodel ppmodel = new PPmodel();
-					LImodel limodel = new LImodel();
 
 				} catch (Exception e) {
 					e.printStackTrace();
